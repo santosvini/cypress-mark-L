@@ -1,0 +1,33 @@
+{
+  "name": "cypress-express-mark",
+  "version": "1.0.0",
+  "description": "Projeto de Testes de ponta a ponta no Mark L",
+  "main": "index.js",
+  "scripts": {
+    "cy:open": "cypress open",
+    "cy:open:mobile": "cy:open --config viewportWidth=375 viewportHeight=812",
+    "cy:test": "cypress run",
+    "cy:test:mobile": "cy:test --config viewportWidth=375 viewportHeight=812",
+    "cy:chrome": "cy:test --browser chrome",
+    "cy:firefox": "cy:test --browser firefox",
+    "cy:edge": "cy:test --browser edge",
+    "allure:results": "cy:test --env allure-true",
+    "allure:serve": "http-server report-server/",
+    "allure:generate": "allure generate ./allure-results -o ./report-server"
+  },
+  "keywords": [
+    "Testing",
+    "Cypress.io",
+    "QAx",
+    "e2e",
+    "APIs"
+  ],
+  "author": "Vini Santos",
+  "license": "MIT",
+  "devDependencies": {
+    "@shelex/cypress-allure-plugin": "^2.34.0",
+    "allure-commandline": "^2.20.1",
+    "cypress": "12.2.0",
+    "http-server": "^14.1.1"
+  }
+}
